@@ -2,14 +2,10 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.202.5/containers/cpp
 {
 	"name": "AtCoder F# (.NET Core)",
-	"build": {
-		"dockerfile": "Dockerfile",
-	},
-	"runArgs": [ "--init", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+	"image": "syamorock/atcoder-fs:main",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
