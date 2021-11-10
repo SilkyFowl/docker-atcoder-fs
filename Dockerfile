@@ -4,10 +4,8 @@
 # ARG VARIANT="bionic"
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-bionic
 
-# set mirror
-RUN sed -i.bak -r 's!deb \S+!deb mirror://mirrors.ubuntu.com/mirrors.txt!' /etc/apt/sources.list \
 # install software-properties-common(add-apt-repository)
-    && apt-get update \
+RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends software-properties-common \
     && rm -rf /var/lib/apt/lists/* \
